@@ -1,11 +1,13 @@
 # Inputs
-file <- file("Day_0-inputs-02.txt", "r")
-number_of_elements <- readLines(file, n = 1)
-elements <- strsplit(readLines(file, n = 1), ' ')
-weights <- strsplit(readLines(file, n = 1), ' ')
+#inputs <- readLines('stdin')
+inputs <- readLines("Day_0-inputs-02.txt")
+number_of_elements <- as.numeric( inputs[1] )
+elements <- as.numeric( strsplit(inputs[2], split = " ")[[1]] )
+weights <- as.numeric( strsplit(inputs[3], split = " ")[[1]] )
 
-
-weighted_mean <- weighted.mean(elements, weights)
+#Calculate weighted mean
+weighted_mean <- round(weighted.mean(elements, weights), digits=1)
 
 # Outputs
 cat(weighted_mean, '\n')
+

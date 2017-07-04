@@ -1,4 +1,5 @@
 # Inputs
+# inputs <- scan(file = "stdin")
 inputs <- scan(file = "Day_0-inputs-01.txt")
 number_of_elements <- inputs[1]
 elements <- inputs[2:length(inputs)]
